@@ -1,16 +1,8 @@
-let year = prompt ('Year:');
-let check = year >= 1000;
+let year = Number(prompt ('Year:'));
 
-if (check==true && year % 4 == 0 && year % 400 == 0)  {
+if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0 )  {
     alert ('This is leap year');
-}
-else if (check==false && year % 4 == 0) {
-    alert ('This is leap year');
-}
-else if (check==true && year % 4 == 0 && year % 400 !== 0) {
-    alert ('This is not leap year');
-}    
- else {
-    alert ('This is not leap year');
+} else {
+    alert (`${year} is not leap year`);
 }
 

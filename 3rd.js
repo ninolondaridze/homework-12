@@ -1,16 +1,27 @@
-let firstInput = prompt('Please tell 1st number: ');
-let secondInput = prompt('Please tell second number: ');
+let firstInput = Number(prompt('Please, tell 1st number: '));
+let secondInput = Number(prompt('Please, tell 2nd number: '));
 let typeOfOperation = prompt('What would you like to perform?');
+let result;
 
-if (typeOfOperation == '*') {
-    alert (`Product is: ${firstInput*secondInput}`);
-}
-else if (typeOfOperation == '/') {
-    alert (`Quotient is: ${firstInput/secondInput}`);
-}
-else if (typeOfOperation == '+') {
-    alert (`Sum is: ${Number(firstInput)+Number(secondInput)}`);
-}
-else if (typeOfOperation == '-') {
-    alert (`Difference is: ${Number(firstInput)-Number(secondInput)}`);
+if (isNaN(firstInput) || isNaN(secondInput)) {
+    alert('Please, enter only numbers');
+} else {
+    switch (typeOfOperation) {
+        case '+':
+            result = firstInput + secondInput;
+            break;
+
+        case '-':
+            result = firstInput - secondInput;
+            break;
+
+        case '*':
+            result = firstInput * secondInput;
+            break;
+
+        case '/':
+            result = firstInput / secondInput;
+            break;
+    }
+    alert(`The result is: ${result} `)
 }
