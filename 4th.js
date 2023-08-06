@@ -1,9 +1,8 @@
 let number = prompt ('Enter a number: ');
-let check = isNaN(number);
 
-while (check === true) {
-    number = prompt ('Enter a number: ');
-    check = isNaN(number);
+while (isNaN(number)) {
+    alert('You entered wrong number');
+    number = prompt('Enter number again')
 }
 alert(number);
 
